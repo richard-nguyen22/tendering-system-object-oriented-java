@@ -8,14 +8,16 @@ If Netbeans 8.2 cannot open any file or project, set the correct path of jdk_hom
 - Find the line: `netbeans_jdkhome=` and enter the path of JDK 1.8
   ![JDK Home](./images/jdkhome.png)
 
-## Requirements
+## Tendering system
+This project is an oject-orient programming with Java project. The project is to implement a menu driven (GUI) system for a tendering company to manage tendering projects.
+
 Tendering system should be menu driven with options for:
-- System Admin
+- *System Admin*
   - Manage his/her profile
   - Manage Account for Manager (Add/Delete/Edit/View/Search)
   - Manage Account for Tendering officer (Add/Delete/Edit/View/Search) 
   
-- Manager:
+- *Manager*
   - Manage tendering requests (Add/Delete/Edit/View/Search)
   - Product Category and Material Specification (Add/Delete/Edit/View/Search)
   - Set and apply the discount to the selected products. (Add/Delete/Edit/View)
@@ -23,7 +25,7 @@ Tendering system should be menu driven with options for:
   `Tendering price = Standard price (product) + discount + mark-up + labour cost`
   - Generate project tender reports with all related product listings.
 
-- Tendering officer:
+- *Tendering officer*
   - Search for a particular product by general name.
   - Add product into the tender list
   - Compute the total prices
@@ -39,6 +41,8 @@ Class diagram:
 
 ## Tendering System GUI
 ### Run the tendering system
+Please download and unzip the file `Tendering System.zip`. `Tendering System.zip` contains Java source. This project should be run in Netbeans 8.2
+
 The file `main.java` under *GUI* package is run to start and use the tendering system.
   ![Main](./images/main.png)
 ### Users:
