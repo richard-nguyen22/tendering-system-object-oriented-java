@@ -96,7 +96,7 @@ Tendering System can identify and show the correct GUI based on user's role. The
 * In products list on the right hand side, only manager can add and adjust the product information: price, 
 
 ## Data from text file
-This tendering system creates and saves data as text file. I chose text file because I wanted to learn about Java input output at that time.
+This tendering system creates and saves data as text file.
 ```
 ├── data
     └── logs.txt -- Save all logs information
