@@ -8,7 +8,7 @@ If Netbeans 8.2 cannot open any file or project, set the correct path of jdk_hom
 * Find the line: `netbeans_jdkhome=` and enter the path of JDK 1.8
   ![JDK Home](./images/jdkhome.png)
 
-## Tendering system
+## Tendering system requirements
 This project is an oject-orient programming with Java project. The project is to implement a menu driven (GUI) system for a tendering company to manage tendering projects. Tendering system should be menu driven with options for:
 * *System Admin*
   * Manage his/her profile
@@ -37,11 +37,31 @@ Class diagram:
 
   ![Tendering Use case diagram](./images/class-diagram.png)
 
-## Tendering System GUI
-### Run the tendering system
-Please download and unzip the file `Tendering System.zip`. `Tendering System.zip` contains Java source. This project should be run in Netbeans 8.2
+## The Tendering System
+### Different methods to save data
+There are 2 folders to open and run the system:
+1. `tendering-system-text-data`. In this system, data is saved as text files in hard drive
+2. `tendering-system-database` **[To be implemented soon]**. In this system, data is saved in a database, however, the database is not implemented yet, I will finish this system soon in the future.
 
-The file `main.java` under *GUI* package is run to start and use the tendering system.
+#### File structure of Tendering System using Text data
+This tendering system creates and saves data as text file.
+```
+├── data
+    └── logs.txt -- Save all logs information
+    └── products list.txt -- Save available products in the storage. Added by the manager
+    └── staff.txt -- Information of all users in tendering system. Modify by system admin
+    └── order.txt 
+    └── tender
+        └── tender.txt -- Information of all tender projects: status, cost, date
+        └── Project_name -- A new folder with project_name is created after manager adds a new project
+            └── products.txt -- All products added by tendering officer
+```
+When the manage create a new tender project, in *tender* folder, a folder with project name is created with *products.txt*. Later, officer add products, this *products.txt* is updated with added products.
+
+### Run the tendering system
+**Notice:** This project should be run in Netbeans 8.2 with JDK 1.8. Apache NetBeans IDE 12.1 will not identify and show the GUI files
+
+Under `GUI` package, `main.java` should be run to start and use the tendering system.
 
   ![Main](./images/main.png)
 
@@ -94,18 +114,3 @@ Tendering System can identify and show the correct GUI based on user's role. The
 **Notice**:
 * The tendering officer can only view tendering projects that are created by the manager.
 * In products list on the right hand side, only manager can add and adjust the product information: price, 
-
-## Data from text file
-This tendering system creates and saves data as text file.
-```
-├── data
-    └── logs.txt -- Save all logs information
-    └── products list.txt -- Save available products in the storage. Added by the manager
-    └── staff.txt -- Information of all users in tendering system. Modify by system admin
-    └── order.txt 
-    └── tender
-        └── tender.txt -- Information of all tender projects: status, cost, date
-        └── Project_name -- A new folder with project_name is created after manager adds a new project
-            └── products.txt -- All products added by tendering officer
-```
-When the manage create a new tender project, in *tender* folder, a folder with project name is created with *products.txt*. Later, officer add products, this *products.txt* is updated with added products.
